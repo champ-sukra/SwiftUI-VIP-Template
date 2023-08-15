@@ -14,8 +14,6 @@ struct ___FILEBASENAMEASIDENTIFIER___ {
     // Data struct sent to Presenter
     struct Response {}
     
-    // Data struct sent to ViewController
-    struct ViewModel {
-        struct Displayed {}
-    }
+    // Transformed Data for display sending to View
+    struct ViewModel {}
 }

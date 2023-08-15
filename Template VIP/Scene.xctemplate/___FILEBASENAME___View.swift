@@ -8,11 +8,11 @@
 import SwiftUI
 
 protocol ___VARIABLE_sceneName___DisplayLogic {
-    func displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel.Displayed)
+    func displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel)
 }
 
 extension ___VARIABLE_sceneName:identifier___View: ___VARIABLE_sceneName___DisplayLogic {
-    func displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel.Displayed) {
+    func displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel) {
         //TODO: render UI
     }
 }
@@ -20,6 +20,8 @@ extension ___VARIABLE_sceneName:identifier___View: ___VARIABLE_sceneName___Displ
 struct ___VARIABLE_sceneName:identifier___View: View {
     var interactor: ___VARIABLE_sceneName:identifier___InteractorInterface?
     var router: ___VARIABLE_sceneName:identifier___RouterInterface?
+    
+    @ObservedObject var dataStore: ___VARIABLE_sceneName___DataStore
     
     var body: some View {
         VStack {

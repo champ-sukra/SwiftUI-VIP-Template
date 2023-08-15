@@ -12,7 +12,7 @@ protocol ___FILEBASENAMEASIDENTIFIER___Interface {
 }
 
 final class ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Interface {
-    var view: ___VARIABLE_sceneName:identifier___View?
+    var view: ___VARIABLE_sceneName___DisplayLogic?
     
     func navigateToViewController() {
         // TODO: Navigate to viewController

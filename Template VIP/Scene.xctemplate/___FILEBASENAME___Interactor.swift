@@ -9,22 +9,26 @@ import Foundation
 
 protocol ___FILEBASENAMEASIDENTIFIER___Interface {
     func startDoingSomething(request: ___VARIABLE_sceneName:identifier___Model.Request)
-    var model: Any? { get }
 }
 
 final class ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Interface {
     var presenter: ___VARIABLE_sceneName:identifier___PresenterInterface?
-    var model: Any?
-    
     var worker: ___VARIABLE_sceneName:identifier___Worker = ___VARIABLE_sceneName:identifier___Worker()
     
     func startDoingSomething(request: ___VARIABLE_sceneName:identifier___Model.Request) {
-        worker.getSomething(body: nil) { res in
-            // TODO: - add business logic here for success
-            self.model = res
-            self.presenter?.presentSomething(response: ___VARIABLE_sceneName:identifier___Model.Response())
-        } fail: { errCode in
-            // TODO: - add business logic here for fail
+        worker.getSomething(body: nil) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let data):
+                // TODO: - add business logic here for success
+                self.presenter?.presentSomething(response: ___VARIABLE_sceneName:identifier___Model.Response())
+            case .failure(let errCode):
+                // TODO: - add business logic here for fail
+                print(errCode)
+            }
         }
     }
 }

@@ -12,11 +12,11 @@ protocol ___FILEBASENAMEASIDENTIFIER___Interface {
 }
 
 final class ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Interface {
-    var view: ___VARIABLE_sceneName:identifier___View?
+    var view: ___VARIABLE_sceneName___DisplayLogic?
     
     func presentSomething(response: ___VARIABLE_sceneName:identifier___Model.Response) {
         // TODO: transform response model to display model
-        view?.displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel.Displayed())
+        view?.displaySomething(display: ___VARIABLE_sceneName:identifier___Model.ViewModel())
     }
 }
 

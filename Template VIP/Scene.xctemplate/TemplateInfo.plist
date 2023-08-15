@@ -78,11 +78,25 @@
 			<key>Default</key>
 			<string>___VARIABLE_sceneName:identifier___Model</string>
 			<key>Description</key>
-			<string>The model file name</string>
+			<string>The model name</string>
 			<key>Identifier</key>
-			<string>modelFileName</string>
+			<string>modelName</string>
 			<key>Name</key>
 			<string>Model File Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_sceneName:identifier___DataStore</string>
+			<key>Description</key>
+			<string>The data storage name</string>
+			<key>Identifier</key>
+			<string>dataStroreName</string>
+			<key>Name</key>
+			<string>Data Store Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
